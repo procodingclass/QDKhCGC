@@ -40,11 +40,16 @@ function setup() {
   invisibleGround = createSprite(200, 190, 400, 10);
   invisibleGround.visible = false;
 
-  console.log("Hello" + 5);
+  score = 0;
 }
 
 function draw() {
-  background(220);
+  background("white");
+
+  text("Score: " + score, 500, 50);
+  //Calculate the score as per frameCount
+
+
 
   if (keyDown("space") && trex.y >= 100) {
     trex.velocityY = -12;
@@ -68,7 +73,19 @@ function draw() {
 }
 
 function spawnObstacles() {
-  
+  if (frameCount % 60 === 0) {
+    var obstacle = createSprite(400, 165, 10, 40);
+    obstacle.velocityX = -6;
+
+    // generate random obstacles
+    //Hint : Checkout Step 1 image inside screenshots folder
+
+
+    //assign scale and lifetime to the obstacle
+    //Hint : Checkout Step 2 image inside screenshots folder
+
+
+  }
 }
 
 function spawnClouds() {
